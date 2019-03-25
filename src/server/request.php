@@ -13,8 +13,8 @@ $chatType = $update["message"]["chat"]["type"];
 $message = $update["message"]["text"];
 
 switch ($message) {
-    case '/command':
-        $response = "Este es el mensaje del bot al comando.";
+    case '/saludos':
+        $response = "Sois unos mataos, pero de ven en cuando os haceis querer.";
         sendMessage($chatId, $response);
         break;
     case '/noticias':
