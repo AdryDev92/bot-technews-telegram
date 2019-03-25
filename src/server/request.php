@@ -1,5 +1,7 @@
 <?php
 
+echo "funciona";
+/**
 //api token bot
 $botToken = "861290587:AAH4gVojqBE8P2Ni0MKuPPYCggCELo-hKH4";
 $website = "https://adrydev92.github.io/bot-technews-telegram/".$botToken;
@@ -43,4 +45,6 @@ function getNews($chatId){
     
     sendMessage($chatId, $titulos);
 }
+**/
+
 ?>
