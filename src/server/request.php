@@ -1,10 +1,8 @@
 <?php
 
-echo "funciona";
-/**
 //api token bot
-$botToken = "861290587:AAH4gVojqBE8P2Ni0MKuPPYCggCELo-hKH4";
-$website = "https://adrydev92.github.io/bot-technews-telegram/".$botToken;
+$botToken = "850248159:AAHTK-lDlr8ClCTAiP_eMnJGKjkgGRdcgnA";
+$website = "https://bot-technews-telegram.herokuapp.com/".$botToken;
 
 $update = file_get_contents('php://input');
 $update = json_decode($update, TRUE);
@@ -15,8 +13,24 @@ $chatType = $update["message"]["chat"]["type"];
 $message = $update["message"]["text"];
 
 switch ($message) {
-    case '/saludos':
-        $response = "Sois unos mataos, pero de ven en cuando os haceis querer.";
+    case '/unga':
+        $response = "Unguers, a la batalla sin miedo!!!";
+        sendMessage($chatId, $response);
+        break;
+        case '/admin':
+        $response = "@Jennicet_caudi, te necesitan aqui!!!";
+        sendMessage($chatId, $response);
+        break;
+        case '/shadow':
+        $response = "Comprueba si estas shadowbanned en twitter: shadownban.eu";
+        sendMessage($chatId, $response);
+        break;
+        case '/leka':
+        $response = "Parece que tienes complejo de LekaconK";
+        sendMessage($chatId, $response);
+        break;
+        case '/cardigan':
+        $response = "Borra tuits inapropiados: www.gocardigan.com";
         sendMessage($chatId, $response);
         break;
     case '/noticias':
@@ -45,6 +59,5 @@ function getNews($chatId){
     
     sendMessage($chatId, $titulos);
 }
-**/
 
 ?>
