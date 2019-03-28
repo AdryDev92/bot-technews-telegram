@@ -2,7 +2,7 @@
 
 //api token bot
 $botToken = "850248159:AAHTK-lDlr8ClCTAiP_eMnJGKjkgGRdcgnA";
-$website = "https://bot-technews-telegram.herokuapp.com/".$botToken;
+$website = "https://api.telegram.org".$botToken;
 
 $update = file_get_contents('php://input');
 $update = json_decode($update, TRUE);
